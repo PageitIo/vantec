@@ -131,12 +131,9 @@ h4{
 }
 
 
-.landing_wrapper{
-    padding: 5rem;
-    justify-content: center;
-    align-items: center;
-}
-  
+.landing_wrapper {
+    text-align: center;
+  }
 
   
 
