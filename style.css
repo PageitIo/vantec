@@ -140,4 +140,35 @@ h4{
 
 
   
+
+/* make the 1st section span from 10% */
  
+.app1-body{
+    width: 768000px;
+    height: 1000px;
+    justify-content: center;
+    align-items: center; 
+    padding-top: 50px; 
+    padding-bottom: 50px;
+    background: #000;
+}
+
+.section-1{
+    background-color: #606060;
+    max-width: 2000px;
+    height: 1000px;
+}
+
+.section_wrapper{
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_image{
+    max-width: 100%;
+    height: 100%;
+}
+
+.form-wrapper{
+    border: solid #fff 0.5px;
+}
