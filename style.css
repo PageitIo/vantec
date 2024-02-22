@@ -1,7 +1,5 @@
 /* Begining of general css */
 
-
-
 /* Font face*/
 
 @font-face {
@@ -109,6 +107,13 @@ h4{
     width:2000px;
     background: #fff;
     margin: 0 auto;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2000px;
+    border-radius: 50px;
   
 }
 
@@ -130,7 +135,13 @@ h4{
 
 .landing_wrapper{
     padding: 5rem;
+    justify-content: center;
+    align-items: center;
 }
   
 
   
+
+
+  
+ 
