@@ -17,15 +17,25 @@
   }
 
   
+  body{
+    font-family: 'Roobert-Regular';
+  }
+
+  :root{
+    --primary-color: #FE0000;
+    --secondary-color: #1E1D28;
+    --grey-color: #1E1D28
+  }
 
 .app-body{
-    width: 768000px;
+    width: 8000px;
     height: 1000px;
     justify-content: center;
     align-items: center; 
     padding-top: 50px; 
     padding-bottom: 50px;
     background: #D2D2D2;
+   
 }
 
 
@@ -113,7 +123,6 @@ h4{
     position: absolute;
     top: 50%;
     left: 15%;
-    transform: translate(-50%, -50%);
     border-radius: 50px;
   
 }
@@ -147,32 +156,113 @@ h4{
 /* make the 1st section span from 10% */
  
 .app1-body{
-    width: 768000px;
-    height: 1000px;
-    justify-content: center;
-    align-items: center; 
-    padding-top: 50px; 
-    padding-bottom: 50px;
+    width: 8000px;
+    height: 100vh;
     background: #000;
+    display: flex;
 }
 
 .section-1 {
-    background-color: #606060;
-    max-width: 2000px;
+    background-image: url('/images/login-background-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 2000px;
     height: 100vh !important;
-    margin-left: 54rem;
-}
-
-.section_wrapper{
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.profile_image{
-    max-width: 100%;
-    height: 100%;
+.form-input{
+    height: 50px;
+  
+    background-color: #D9D9D9;
+    border: 0px;
 }
 
-.form-wrapper{
-    border: solid #fff 0.5px;
+.auth_form_wrapper{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.flex{
+    display: flex;
+}
+
+.main-container {
+    width: 300px;
+    margin: 0 auto; /* Centering the container horizontally */
+    text-align: left; /* Centering the content inside the container */
+}
+
+
+.profile_image{
+    max-width: 215px;
+    height: 215px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Form styling */
+.form-group{
+    display: grid;
+    margin-bottom: 1rem;
+}
+
+.form-label{
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+
+.form-input{
+    border-radius: 15px;
+    padding-left: 1rem;
+
+}
+
+.form-input:focus {
+    outline: none;
+    border: 1px solid var(--primary-color);
+
+}
+
+
+.auth-submit{
+    width: 100%;
+    height: 47px;
+    background-color: var(--primary-color);
+    border: 0px;
+    border-radius: 15px;
+    color: #fff;
+}
+
+
+/* Arrow section*/
+
+.arrow-section{
+    width: 2000px;
+    height: 100vh;
+  
+}
+
+.arrow-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.center-content {
+    text-align: center;
+    color: #fff;
+}
+
+.arrow-right {
+    width: 300px;
+    height: 300px;
+    opacity: 0.4;
 }

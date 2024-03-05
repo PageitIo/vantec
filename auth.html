@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vantec Auth Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/app.js"></script>
+    
+</head>
+
+<body class="app1-body">
+    <div class="section-1"> <!-- Login section-->
+        <div class="main-container">
+            <img src="images/profile-image.png" class="profile_image" alt="">
+            <form id="loginForm">
+                <div class="form-group">
+                    <label class="form-label" for="username">Your Username:</label>
+                    <input class="form-input" type="text" id="username" name="username"
+                        placeholder="Enter your username" required autofocus>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="pin">Enter your PIN:</label>
+                    <input class="form-input" type="password" id="pin" name="pin" placeholder="Enter your PIN" required>
+                </div>
+                <button class="auth-submit" type="submit">Submit</button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="arrow-section"> <!-- Login arrow-->
+        <div class="center-content">
+            <div class="direction-wrapper">
+                <img src="images/login-arrow-right.svg" class="arrow-right" alt="">
+                <h2 class="">Login this way...</h2>
+            </div>
+        </div>
+    </div>
+    <div class="arrow-section"> <!-- Login arrow-->
+        <div class="center-content">
+            <div class="direction-wrapper">
+                <img src="images/login-arrow-right.svg" class="arrow-right" alt="">
+                <h2 class="">Login this way...</h2>
+            </div>
+        </div>
+    </div>
+    <div class="arrow-section"> <!-- Login arrow-->
+        <div class="center-content">
+            <div class="direction-wrapper">
+                <img src="images/login-arrow-right.svg" class="arrow-right" alt="">
+                <h2 class="">Login this way...</h2>
+            </div>
+        </div>
+    </div>
+    <script src="/app.js"></script>
+</body>
+<script>
+    const directionWrappers = document.querySelectorAll('.direction-wrapper');
+let currentIndex = directionWrappers.length - 1;
+function showNextDirectionWrapper() {
+
+    directionWrappers.forEach(wrapper => {
+        wrapper.style.display = 'none';
+    });
+
+    const currentWrapper = directionWrappers[currentIndex];
+    currentWrapper.style.display = 'block';
+
+    currentIndex = (currentIndex - 1 + directionWrappers.length) % directionWrappers.length;
+}
+showNextDirectionWrapper();
+setInterval(showNextDirectionWrapper, 1000);
+</script>
+</html>
