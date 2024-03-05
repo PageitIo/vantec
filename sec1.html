@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vantec Section Video Page</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body class="app1-body">
+    <div class="section-wrapper">
+        <div class="wrapper_inner">
+            <!-- Section title begins here-->
+            <h2 class="section-title">Section [ ] Video</h2>
+            <div class="section-page">
+                <div class="section-icon">
+                    <svg class="brand-primary-1 active" width="87" height="14" viewBox="0 0 87 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.5407 0.5H18.3701L18.2351 0.60425L2.69442 12.6042L1.53437 13.5H3H70.343H70.5315L70.6731 13.3756L84.33 1.3756L85.3265 0.5H84H18.5407Z"
+                            stroke="black" />
+                    </svg>
+                    <svg class="brand-primary-2" width="87" height="14" viewBox="0 0 87 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.5407 0.5H18.3701L18.2351 0.60425L2.69442 12.6042L1.53437 13.5H3H70.343H70.5315L70.6731 13.3756L84.33 1.3756L85.3265 0.5H84H18.5407Z"
+                            stroke="black" />
+                    </svg>
+                </div>
+                <span class="line"></span>
+            </div> <!-- Section title ends here-->
+
+
+            <!-- Video Content begin-->
+     
+            <div class="video-frame">
+                <video   preload="auto" width="100%" height="100%">
+                    <source src="videos/section-1-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay"></div>
+                <div class="play-button">
+                    <img src="images/play-button.svg" alt="Play Button">
+                </div>
+            </div>
+         
+            <div class="answer-button" >
+                <a id="answer-link" href="/question.html">
+                    <button class="question-trigger">Start Questions</button>
+                </a>
+                
+
+                <audio >
+                    <source src="audio/Comp-video.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <!--Video content end-->
+
+            
+            <img src="images/vanetc-mission.png" class="bottom-right-image" alt="Your Image">
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const videoPlayer = document.querySelector('.video-frame video');
+    const playButton = document.querySelector('.play-button');
+    const videoOverlay = document.querySelector('.video-overlay');
+    const answerButton = document.querySelector('.answer-button');
+    const audioElement = document.querySelector('audio');
+
+    if (videoPlayer && playButton && videoOverlay) {
+        playButton.addEventListener('click', function() {
+            playButton.style.display = 'none';
+            videoOverlay.style.display = 'none';
+            videoPlayer.play();
+        });
+
+        videoPlayer.addEventListener('click', function() {
+            if (videoPlayer.paused) {
+                videoPlayer.play();
+                playButton.style.display = 'none';
+                videoOverlay.style.display = 'none';
+            } else {
+                videoPlayer.pause();
+                playButton.style.display = 'block';
+                videoOverlay.style.display = 'block';
+            }
+        });
+
+        videoPlayer.addEventListener('ended', function() {
+            document.querySelector('.video-frame').style.display = 'none';
+            answerButton.style.display = 'block';
+            audioElement.play(); // Play the audio when the button div shows
+        });
+    }
+
+
+     /* This is to listen to keybaord enter key */
+    const questionTriggerButton = document.querySelector('.question-trigger');
+    const answerLink = document.getElementById('answer-link');
+
+    if (questionTriggerButton && answerLink) {
+        questionTriggerButton.addEventListener('click', redirectToAnswer);
+        
+        // Listen for keyboard input
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                redirectToAnswer();
+            }
+        });
+    }
+
+    function redirectToAnswer() {
+        answerLink.click(); // Simulate click on the link to navigate to the answer route
+    }
+
+    /* End Keybaord enter  */
+});
+
+
+
+// /* This is to listen to keybaord enter key */
+// document.addEventListener('DOMContentLoaded', function() {
+    
+// });
+
+// /*En
+</script>
+
+
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+    const options = document.querySelectorAll('.option');
+    let selectedIndex = 0;
+
+    // Set focus to the first option
+    options[selectedIndex].focus();
+    options[selectedIndex].classList.add('selected');
+
+    options.forEach((option, index) => {
+        option.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowUp') {
+                selectedIndex = index === 0 ? options.length - 1 : index - 1;
+                focusOption(selectedIndex);
+            } else if (event.key === 'ArrowDown') {
+                selectedIndex = index === options.length - 1 ? 0 : index + 1;
+                focusOption(selectedIndex);
+            } else if (event.key === 'Enter') {
+                selectOption(selectedIndex);
+            }
+        });
+    });
+
+    function focusOption(index) {
+        options.forEach((option, i) => {
+            if (i === index) {
+                option.classList.add('selected');
+                option.focus();
+            } else {
+                option.classList.remove('selected');
+            }
+        });
+    }
+
+    function selectOption(index) {
+        options.forEach((option, i) => {
+            if (i === index) {
+                alert('Selected Option: ' + option.textContent);
+            }
+        });
+    }
+});
+ 
+</script>
