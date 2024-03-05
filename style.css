@@ -16,6 +16,8 @@
     font-style: normal;
   }
 
+  
+
 .app-body{
     width: 768000px;
     height: 1000px;
@@ -74,10 +76,11 @@ h4{
     display: flex;
     animation: scroll-right 15s linear infinite;
     animation-direction: alternate; 
+    margin-left:40rem;
 }
 
 
-@keyframes scroll-left {
+/* @keyframes scroll-left {
     0% {
         transform: translateX(0);
     }
@@ -94,7 +97,7 @@ h4{
     100% {
         transform: translateX(0);
     }
-}
+} */
 
 
   .mt-5{
