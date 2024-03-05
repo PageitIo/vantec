@@ -429,3 +429,9 @@ h4{
     height: 80vh;
 }
 
+
+.questions{
+    display: grid;
+}
+
+
